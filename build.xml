@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project PPE-IMU with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/Simon/Documents/workspace/PPE-IMU/dist/IMU.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="fr.ece.controller.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ jogl-all.jar jogl-all-natives-windows-i586.jar jogl-all-natives-windows-amd64.jar jogl-all-natives-macosx-universal.jar jogl-all-natives-linux-i586.jar jogl-all-natives-linux-armv6hf.jar jogl-all-natives-linux-amd64.jar gluegen-rt.jar gluegen-rt-natives-windows-i586.jar gluegen-rt-natives-windows-amd64.jar gluegen-rt-natives-macosx-universal.jar gluegen-rt-natives-linux-i586.jar gluegen-rt-natives-linux-armv6hf.jar gluegen-rt-natives-linux-amd64.jar core.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="/Users/Simon/Documents/workspace/PPE-IMU/bin"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all-natives-windows-i586.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all-natives-windows-amd64.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all-natives-macosx-universal.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all-natives-linux-i586.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all-natives-linux-armv6hf.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="jogl-all-natives-linux-amd64.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-windows-i586.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-windows-amd64.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-macosx-universal.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-linux-i586.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-linux-armv6hf.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-linux-amd64.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="core.jar"/>
+        </jar>
+    </target>
+</project>
