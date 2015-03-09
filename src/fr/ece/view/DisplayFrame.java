@@ -18,7 +18,7 @@ public class DisplayFrame extends JFrame {
         this.setSize(600, 600); //The window Dimensions
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         javax.swing.JPanel panel = new javax.swing.JPanel();
-        panel.setBounds(20, 20, 600, 600);
+        //panel.setBounds(20, 20, 600, 600);
         
         
         Processing sketch = new Processing();

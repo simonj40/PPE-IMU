@@ -15,17 +15,13 @@ public class Processing extends PApplet {
 	public float scale=1;
 	
 	public Data data;	  
-	
-	public String PATH = "/Users/Simon/Desktop/test1.txt";
-	
+		
 	public int height = 800;
 	
 	public int width = 800;
 	public int boxSize = height/2;
 	
-	public float scalePos = 1;
-	
-	
+	public float scalePos = 80;
 	
 	public void setup() {
 		
@@ -60,9 +56,7 @@ public class Processing extends PApplet {
 		  
 		  for(Coordinates c : data.pos){
 			  stroke(255,0,0);
-			  
 		      vertex((float)c.x*scalePos, (float)c.y*scalePos, (float)c.z*scalePos);
-
 		  }
 		  
 		  endShape();

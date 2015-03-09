@@ -19,7 +19,6 @@ import fr.ece.view.DisplayFrame;
 public class Main {
 	
 	
-	public static String PATH = "/Users/Simon/Desktop/test1.txt";
 	
     public static void main(String[] args) {
     	
