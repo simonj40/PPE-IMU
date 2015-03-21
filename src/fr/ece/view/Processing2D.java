@@ -60,7 +60,7 @@ public float scale=1;
 		  
 		  for(Coordinates c : data.pos){
 			  stroke(0,0,0);
-			  vertex((float)c.x, (float)c.y);
+			  vertex((float)c.getX(), (float)c.getY());
 		  }
 		  
 		  endShape();

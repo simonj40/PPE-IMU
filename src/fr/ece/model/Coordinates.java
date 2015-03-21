@@ -3,32 +3,56 @@
  */
 package fr.ece.model;
 
+import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
+
 /**
  * @author Simon
  *
  */
-public class Coordinates {
+public class Coordinates extends Vector3D {
 
-	public double x;
-	public double y;
-	public double z;
+	private double time;
+
+	
 	/**
 	 * @param x
 	 * @param y
 	 * @param z
+	 * @param time
 	 */
-	public Coordinates(double x, double y, double z) {
-		super();
-		this.x = x;
-		this.y = y;
-		this.z = z;
+	public Coordinates(double x, double y, double z, double time) {
+		super(x,y,z);
+		this.time = time;
 	}
 	
+	public Coordinates(Vector3D vector, double time) {
+		super(1, vector);
+		this.time = time;
+	}
 	
-	public String toString(){
-		
-		return x + "," + y + "," + z;
-		
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param time
+	 */
+	public Coordinates(double x, double y, double z) {
+		super(x,y,z);
+	}
+	
+	/**
+	 * @return the time
+	 */
+	public double getTime() {
+		return time;
+	}
+
+	/**
+	 * @param time
+	 *            the time to set
+	 */
+	public void setTime(double time) {
+		this.time = time;
 	}
 	
 }

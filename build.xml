@@ -8,7 +8,7 @@
                 <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
                 <attribute name="Rsrc-Main-Class" value="fr.ece.controller.Main"/>
                 <attribute name="Class-Path" value="."/>
-                <attribute name="Rsrc-Class-Path" value="./ jogl-all.jar jogl-all-natives-windows-i586.jar jogl-all-natives-windows-amd64.jar jogl-all-natives-macosx-universal.jar jogl-all-natives-linux-i586.jar jogl-all-natives-linux-armv6hf.jar jogl-all-natives-linux-amd64.jar gluegen-rt.jar gluegen-rt-natives-windows-i586.jar gluegen-rt-natives-windows-amd64.jar gluegen-rt-natives-macosx-universal.jar gluegen-rt-natives-linux-i586.jar gluegen-rt-natives-linux-armv6hf.jar gluegen-rt-natives-linux-amd64.jar core.jar"/>
+                <attribute name="Rsrc-Class-Path" value="./ jogl-all.jar jogl-all-natives-windows-i586.jar jogl-all-natives-windows-amd64.jar jogl-all-natives-macosx-universal.jar jogl-all-natives-linux-i586.jar jogl-all-natives-linux-armv6hf.jar jogl-all-natives-linux-amd64.jar gluegen-rt.jar gluegen-rt-natives-windows-i586.jar gluegen-rt-natives-windows-amd64.jar gluegen-rt-natives-macosx-universal.jar gluegen-rt-natives-linux-i586.jar gluegen-rt-natives-linux-armv6hf.jar gluegen-rt-natives-linux-amd64.jar core.jar commons-math3-3.4.1.jar"/>
             </manifest>
             <zipfileset src="jar-in-jar-loader.zip"/>
             <fileset dir="/Users/Simon/Documents/workspace/PPE-IMU/bin"/>
@@ -27,6 +27,7 @@
             <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-linux-armv6hf.jar"/>
             <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="gluegen-rt-natives-linux-amd64.jar"/>
             <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="core.jar"/>
+            <zipfileset dir="/Users/Simon/Documents/workspace/PPE-IMU/lib" includes="commons-math3-3.4.1.jar"/>
         </jar>
     </target>
 </project>

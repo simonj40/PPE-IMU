@@ -56,7 +56,7 @@ public class Processing extends PApplet {
 		  
 		  for(Coordinates c : data.pos){
 			  stroke(255,0,0);
-		      vertex((float)c.x*scalePos, (float)c.y*scalePos, (float)c.z*scalePos);
+		      vertex((float)c.getX()*scalePos, (float)c.getY()*scalePos, (float)c.getZ()*scalePos);
 		  }
 		  
 		  endShape();

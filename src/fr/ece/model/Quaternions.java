@@ -3,20 +3,14 @@
  */
 package fr.ece.model;
 
+import org.apache.commons.math3.geometry.euclidean.threed.*;
+
 /**
  * @author Simon
  *
  */
-public class Quaternions {
+public class Quaternions extends Rotation {
 
-	private double Q0;
-	private double Q1;
-	private double Q2;
-	private double Q3;
-	
-	
-	
-	
 	/**
 	 * @param q0
 	 * @param q1
@@ -24,63 +18,19 @@ public class Quaternions {
 	 * @param q3
 	 */
 	public Quaternions(double q0, double q1, double q2, double q3) {
-		super();
-		Q0 = q0;
-		Q1 = q1;
-		Q2 = q2;
-		Q3 = q3;
-		
+		super(q0, q1, q2, q3, true);
 	}
+
 	/**
 	 * @return the q0
 	 */
-	public double getQ0() {
-		return Q0;
-	}
-	/**
-	 * @param q0 the q0 to set
-	 */
-	public void setQ0(double q0) {
-		Q0 = q0;
-	}
-	/**
-	 * @return the q1
-	 */
-	public double getQ1() {
-		return Q1;
-	}
-	/**
-	 * @param q1 the q1 to set
-	 */
-	public void setQ1(double q1) {
-		Q1 = q1;
-	}
-	/**
-	 * @return the q2
-	 */
-	public double getQ2() {
-		return Q2;
-	}
-	/**
-	 * @param q2 the q2 to set
-	 */
-	public void setQ2(double q2) {
-		Q2 = q2;
-	}
-	/**
-	 * @return the q3
-	 */
-	public double getQ3() {
-		return Q3;
-	}
-	/**
-	 * @param q3 the q3 to set
-	 */
-	public void setQ3(double q3) {
-		Q3 = q3;
+
+	public Coordinates rotate(Coordinates vector) {
+		return new Coordinates(this.applyTo(vector), vector.getTime());
 	}
 
-	
-	
-	
+	public Coordinates rotateInverse(Coordinates vector) {
+		return new Coordinates(this.applyInverseTo(vector), vector.getTime());
+	}
+
 }
