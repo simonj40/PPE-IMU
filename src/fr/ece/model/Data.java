@@ -7,6 +7,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +24,7 @@ public class Data {
 	public String PATHOUT = "dataOUT.txt";
 	public String PATHIN = "DATA.txt";
 
-	public int aExtLimit = 10;
+	public int aExtLimit = 50;
 
 	public Vector3D aExt;
 
@@ -176,7 +179,7 @@ public class Data {
 	 */
 
 	public void correctA() {
-
+		
 		List<Coordinates> newList = new ArrayList<>();
 
 		for (int i = 0; i < accel.size(); i++) {
@@ -187,6 +190,22 @@ public class Data {
 			// Remove External Accel from it (gravitational acceleration,
 			// centripetal acceleration, coriolis acceleration)
 			vector = vector.subtract(aExt);
+			
+			double x = vector.getX();
+			BigDecimal bd = new BigDecimal(x);
+			bd = bd.setScale(4, BigDecimal.ROUND_HALF_DOWN);
+			x = bd.doubleValue();
+			double y = vector.getY();
+			bd = new BigDecimal(y);
+			bd = bd.setScale(4, BigDecimal.ROUND_HALF_DOWN);
+			y = bd.doubleValue();
+			double z = vector.getZ();
+			bd = new BigDecimal(z);
+			bd = bd.setScale(4, BigDecimal.ROUND_HALF_DOWN);
+			z = bd.doubleValue();	
+			
+			vector = new Vector3D(x,y,z);
+			
 			vector = vector.scalarMultiply(g);
 			// Add it to the new list
 			newList.add(new Coordinates(vector, a.getTime()));
