@@ -37,7 +37,7 @@ public class Data {
 
 	public double g = 9.81;
 
-	public double RATE = 1 / 0.008;
+	public double RATE = 1 / 0.005;
 
 	/**
 	 * @param accel
